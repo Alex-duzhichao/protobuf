@@ -1,0 +1,18 @@
+// diceroll.proto
+// Definition of the DiceSeries protocol buffer
+
+syntax = "proto2";
+//option cc_api_version = 2;
+
+package codelab;
+
+message DiceSeries {
+
+  message DiceRoll {
+    required int32 value = 1;  // value of this roll, e.g. 2..12
+    optional string nickname = 2;   // string nickname, e.g. "snake eyes"
+  }
+
+  repeated DiceRoll rolls = 1;
+
+};
